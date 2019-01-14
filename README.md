@@ -1,40 +1,43 @@
-![DNN Platform At A Glance](dnnplatform.png)
+# Project Description
 
-Project Description
-==================
-DNN® ( formerly DotNetNuke® ) is the leading open source web content management platform (CMS) in the Microsoft ecosystem. The product is used to build professional looking and easy-to-use commercial websites, social intranets, community portals, or partner extranets. Containing dynamic content of all types, DNN sites are easy to deploy and update. The DNN Platform has been downloaded more than 8 million times and powers more than 750,000 websites globally. A community of more than 1 million members forms a powerful support network. 
+This fork of Dnn.Platform was created to fix a bug that I was experiencing where all pages on DotNetNuke sites would intermittently return 404 responses. 
 
-Thousands of commercial extensions, apps and skins are available at the [DNN Store](http://store.dnnsoftware.com/) that make extending a DNN site fast and affordable.
+I have created a pull request to submit the fixes made to the Dnn.Platform project so that, hopefully, it will be included in future releases of the platform. The pull request can be found [here](https://github.com/dnnsoftware/Dnn.Platform/pull/2032).
 
-Free open source extensions are also available from the [DNN Extensions Forge](http://www.dnnsoftware.com/Community/Download/DNN-Forge).
+Further information about the issue can be found on the DNN issue tracker [here](https://dnntracker.atlassian.net/browse/DNN-10795)
 
-In addition to robust content management, the free, open source DNN Platform includes the following built-in features:
+Subsequently, I've had a number of requests from people to include this fix into previous versions of the DNN platform so that they no longer experience the 404 error on earlier versions. As such I've updated the code in all versions of DotNetNuke that were released between version 8.0.4 and 9.2.2 so that others can use this code to build a version of the DotNetNuke.dll that includes the fix.
 
-* A rich-text editor
-* File management
-* Cloud-ready with MS Azure compatibility
-* Mobile API and basic mobile device detection
-* Core written in C#
-* Single installation, multiple portals
-* Social API (in DNN 6.2 and above)
-* Modern client-side Web tools like CSS 3, HTML 5 and JQuery
-* Bulk email
-* Robust security
-* Administration features like: security roles, protected content and site log
+## Updated Source code
 
-Quick Links
------------
-* [DNN on Facebook](http://www.facebook.com/dotnetnuke)
-* [Community](http://www.dnnsoftware.com/Community)
-* [Questions & Answers](http://answers.dnnsoftware.com/)
-* [Discussion Forums](http://forums.dnnsoftware.com/)
-* [Video Library](http://www.dnnsoftware.com/videos)
-* [News](http://www.dnnsoftware.com/About/In-The-News/Press-Releases)
-* [Community Blogs](http://www.dnnsoftware.com/community-blog)
-* [Extensions Forge](http://www.dnnsoftware.com/Community/Download/DNN-Forge)
-* [DNN Store](http://store.dnnsoftware.com/)
+If you're able to build the DotNetNuke platform from source code, updated code can be built from the following branches:
+* [8.0.4 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/8.0.4)
+* [8.0.4-patches branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/8.0.4-patches)
+* [9.0.0 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.0.0)
+* [9.0.0.patches branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.0.0.patches)
+* [9.0.1 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.0.1)
+* [9.0.2 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.0.2)
+* [9.1.0 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.1.0)
+* [9.1.1 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.1.1)
+* [9.1.1-patches branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.1.1-patches)
+* [9.2.0 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.2.0)
+* [9.2.1 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.2.1)
+* [9.2.2 branch](https://github.com/cameron-moore/Dnn.Platform/tree/release/9.2.2)
 
-How to Contribute
------------------
-We encourage everyone to contribute.
-All the details on contributing with Git and on our working methods can be found on [our Git wiki page] (http://www.dnnsoftware.com/wiki/page/github)
+## Compiled DLLs
+For those that would prefer not to have to build the code themselves I've also provided a compiled version of the DotNetNuke.dll that incorporates the changes. These can be downloaded using the following links.
+
+* [DNN 8.0.4.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/8.0.4.0/DotNetNuke.dll)
+* [DNN 8.0.4.226](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/8.0.4.226/DotNetNuke.dll)
+* [DNN 9.0.0.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.0.0.0/DotNetNuke.dll)
+* [DNN 9.0.0.1002](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.0.0.1002/DotNetNuke.dll)
+* [DNN 9.0.1.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.0.1.0/DotNetNuke.dll)
+* [DNN 9.0.2.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.0.2.0/DotNetNuke.dll)
+* [DNN 9.1.0.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.1.0.0/DotNetNuke.dll)
+* [DNN 9.1.1.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.1.1.0/DotNetNuke.dll)
+* [DNN 9.1.1.129](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.1.1.129/DotNetNuke.dll)
+* [DNN 9.2.0.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.2.0.0/DotNetNuke.dll)
+* [DNN 9.2.1.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.2.1.0/DotNetNuke.dll)
+* [DNN 9.2.2.0](https://github.com/cameron-moore/Dnn.Platform/raw/bug/DNN-10795/Fixed-DLLs/9.2.2.0/DotNetNuke.dll)
+
+Whilst this code has fixed the 404 issues on my own sites & others I make no guarantees that is will work for yours. As always, backup your site before applying any changes so that can revert to the backup if things go wrong.
